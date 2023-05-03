@@ -30,7 +30,7 @@ st.header('Text Classifier Demo')
 input = st.text_area("Please enter the text", value="")
 vec = vector.transform([input]).toarray()
 if st.button("Predict"):
-  st.write(str(list(s.predict(vec))[0]).replace('0', 'TECH').replace('1', 'BUSINESS').replace('2', 'SPORTS').replace('3','ENTERTAINMENT').replace('4','POLITICS'))
+  st.write(str(list(naivebayes.predict(vec))[0]).replace('0', 'TECH').replace('1', 'BUSINESS').replace('2', 'SPORTS').replace('3','ENTERTAINMENT').replace('4','POLITICS'))
   
 
 
